@@ -1,5 +1,4 @@
 @syntax-text-color: @code-color;
-@syntax-cursor-color: @code-color;
 @syntax-invisible-character-color: @syntax-indent-guide-color;
 @syntax-gutter-text-color-selected: @syntax-gutter-text-color;
 @syntax-gutter-background-color: @syntax-background-color;
@@ -24,13 +23,11 @@
     .gutter {
         background-color: @syntax-gutter-background-color;
         color: @syntax-gutter-text-color;
-
         .line-number {
             &.cursor-line {
                 background-color: @syntax-gutter-background-color-selected;
                 color: @syntax-gutter-text-color-selected;
             }
-
             &.cursor-line-no-selection {
                 color: @syntax-gutter-text-color-selected;
             }
@@ -39,7 +36,7 @@
     .gutter .line-number.folded,
     .gutter .line-number:after,
     .fold-marker:after {
-        color: hsl(0,0%,60%);
+        color: @syntax-gutter-text-color;
     }
     // ==========
     .selection .region {
@@ -55,7 +52,7 @@
     border: 0.1em solid @result-marker-selected-border-color;
 }
 .bracket-matcher {
-    background-color: hsl(0,0%,80%);
+    background-color: @bracket-matcher-color;
     opacity: 0.6;
     border-bottom: 0 none;
 }
@@ -72,7 +69,7 @@
         color: @keyword-color;
     }
     .string {
-        color: @quote-color;
+        color: @string-color;
     }
     // String interpolation in Ruby, CoffeeScript, and others
     .string {
@@ -80,10 +77,8 @@
         .meta.embedded.line {
             color: @code-color;
         }
-
         .punctuation.section.embedded {
             color: @code-color;
-
             .source {
                 color: @code-color; // Required for the end of embedded strings in Ruby #716
             }
@@ -119,6 +114,6 @@
         color: @comment-color;
     }
     &.constant, &.constant * {
-        color: @quote-color;
+        color: @string-color;
     }
 }
