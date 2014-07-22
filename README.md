@@ -1,6 +1,6 @@
-# 4-color-base
+# atom-4-color-base
 
-Base package of 4-color syntax themes.
+Base package of Atom's 4-color syntax themes.
 
 To use this package in your syntax theme, set the following variables and then import "path-to-this-package/src/base.less" in your .less file.
 

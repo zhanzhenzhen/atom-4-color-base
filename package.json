@@ -1,10 +1,7 @@
 {
-    "name": "4-color-base",
-    "version": "0.1.0",
-    "description": "Base package of 4-color syntax themes",
+    "name": "atom-4-color-base",
+    "version": "0.2.0",
+    "description": "Base package of Atom's 4-color syntax themes",
     "repository": "https://github.com/zhanzhenzhen/atom-4-color-base",
-    "license": "MIT",
-    "engines": {
-        "atom": ">0.50.0"
-    }
+    "license": "MIT"
 }
