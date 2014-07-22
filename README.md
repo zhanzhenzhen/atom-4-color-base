@@ -26,3 +26,5 @@ To use this package in your syntax theme, set these variables in your .less file
 - @syntax-color-added
 - @syntax-color-modified
 - @syntax-color-removed
+
+- @bracket-matcher-color
