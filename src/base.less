@@ -19,7 +19,7 @@
     .invisible-character {
         color: @syntax-invisible-character-color;
     }
-    // ==========
+    //========
     .gutter {
         background-color: @syntax-gutter-background-color;
         color: @syntax-gutter-text-color;
@@ -38,19 +38,23 @@
     .fold-marker:after {
         color: @syntax-gutter-text-color;
     }
-    // ==========
+    //========
     .selection .region {
         background-color: @syntax-selection-color;
     }
 }
+// workaround the "below selection" problem =====[
 .editor .search-results .marker .region {
     border: none;
     background-color: @syntax-result-marker-color;
+    z-index: -10000;
 }
 .editor .search-results .marker.current-result .region {
     background-color: @syntax-result-marker-color-selected;
     border: 0.1em solid @result-marker-selected-border-color;
+    z-index: 10000;
 }
+// ]========================================
 .bracket-matcher {
     background-color: @bracket-matcher-color;
     opacity: 0.6;
