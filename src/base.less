@@ -3,11 +3,8 @@
 @syntax-gutter-text-color-selected: @syntax-gutter-text-color;
 @syntax-gutter-background-color: @syntax-background-color;
 @syntax-gutter-background-color-selected: @syntax-gutter-background-color;
-.editor-colors {
-    background-color: @syntax-background-color;
-    color: @code-color;
-}
-.editor {
+
+.atom-text-editor, :host {
     background-color: @syntax-background-color;
     color: @code-color;
     .wrap-guide {
@@ -19,7 +16,7 @@
     .invisible-character {
         color: @syntax-invisible-character-color;
     }
-    //========
+
     .gutter {
         background-color: @syntax-gutter-background-color;
         color: @syntax-gutter-text-color;
@@ -38,22 +35,26 @@
     .fold-marker:after {
         color: @syntax-gutter-text-color;
     }
-    //========
+
     .selection .region {
         background-color: @syntax-selection-color;
     }
 }
-.bracket-matcher {
+
+.bracket-matcher .region {
     background-color: @bracket-matcher-color;
     opacity: 0.6;
     border-bottom: 0 none;
 }
+
 .source {
+
     // If this is not added, the markdown font will be "antialiased",
     // which is too bright.
     .gfm {
         -webkit-font-smoothing: auto;
     }
+
     .comment {
         color: @comment-color;
     }
@@ -63,6 +64,7 @@
     .string {
         color: @string-color;
     }
+
     // String interpolation in Ruby, CoffeeScript, and others
     .string {
         .source,
@@ -76,6 +78,7 @@
             }
         }
     }
+
     .constant {
         color: @code-color;
     }
@@ -83,12 +86,14 @@
         color: @code-color;
     }
 }
+
 // workaround a JS parser bug
 .js {
     &.storage.modifier, &.storage.function {
         color: @keyword-color;
     }
 }
+
 .xml, .html {
     &.tag {
         color: @keyword-color;
