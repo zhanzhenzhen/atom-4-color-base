@@ -12,13 +12,13 @@ To use this package in your syntax theme, set the following variables and then i
 - @syntax-background-color
 - @syntax-cursor-color
 - @syntax-selection-color
+- @syntax-selection-flash-color
 
 - @syntax-wrap-guide-color
 - @syntax-indent-guide-color
 
 - @syntax-result-marker-color
 - @syntax-result-marker-color-selected
-- @result-marker-selected-border-color
 
 - @syntax-gutter-text-color
 
