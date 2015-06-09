@@ -48,13 +48,6 @@
 }
 
 .source {
-
-    // If this is not added, the markdown font will be "antialiased",
-    // which is too bright.
-    .gfm {
-        -webkit-font-smoothing: auto;
-    }
-
     .comment {
         color: @comment-color;
     }
@@ -63,6 +56,12 @@
     }
     .string {
         color: @string-color;
+    }
+
+    // Atom marks some keywords like `class`, `var` in some languages as weird things,
+    // we should workaround them.
+    .storage.type, .storage.modifier {
+        color: @keyword-color;
     }
 
     // String interpolation in Ruby, CoffeeScript, and others
@@ -84,13 +83,6 @@
     }
     .tag {
         color: @code-color;
-    }
-}
-
-// workaround a JS parser bug
-.js {
-    &.storage.modifier, &.storage.function {
-        color: @keyword-color;
     }
 }
 
