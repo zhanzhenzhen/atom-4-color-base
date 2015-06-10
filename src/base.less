@@ -4,49 +4,6 @@
 @syntax-gutter-background-color: @syntax-background-color;
 @syntax-gutter-background-color-selected: @syntax-gutter-background-color;
 
-.atom-text-editor, :host {
-    background-color: @syntax-background-color;
-    color: @code-color;
-    .wrap-guide {
-        background-color: @syntax-wrap-guide-color;
-    }
-    .indent-guide {
-        color: @syntax-indent-guide-color;
-    }
-    .invisible-character {
-        color: @syntax-invisible-character-color;
-    }
-
-    .gutter {
-        background-color: @syntax-gutter-background-color;
-        color: @syntax-gutter-text-color;
-        .line-number {
-            &.cursor-line {
-                background-color: @syntax-gutter-background-color-selected;
-                color: @syntax-gutter-text-color-selected;
-            }
-            &.cursor-line-no-selection {
-                color: @syntax-gutter-text-color-selected;
-            }
-        }
-    }
-    .gutter .line-number.folded,
-    .gutter .line-number:after,
-    .fold-marker:after {
-        color: @syntax-gutter-text-color;
-    }
-
-    .selection .region {
-        background-color: @syntax-selection-color;
-    }
-}
-
-.bracket-matcher .region {
-    background-color: @bracket-matcher-color;
-    opacity: 0.6;
-    border-bottom: 0 none;
-}
-
 .source {
     .comment {
         color: @comment-color;
@@ -105,4 +62,47 @@
     &.constant, &.constant * {
         color: @string-color;
     }
+}
+
+.atom-text-editor, :host {
+    background-color: @syntax-background-color;
+    color: @code-color;
+    .wrap-guide {
+        background-color: @syntax-wrap-guide-color;
+    }
+    .indent-guide {
+        color: @syntax-indent-guide-color;
+    }
+    .invisible-character {
+        color: @syntax-invisible-character-color;
+    }
+
+    .gutter {
+        background-color: @syntax-gutter-background-color;
+        color: @syntax-gutter-text-color;
+        .line-number {
+            &.cursor-line {
+                background-color: @syntax-gutter-background-color-selected;
+                color: @syntax-gutter-text-color-selected;
+            }
+            &.cursor-line-no-selection {
+                color: @syntax-gutter-text-color-selected;
+            }
+        }
+    }
+    .gutter .line-number.folded,
+    .gutter .line-number:after,
+    .fold-marker:after {
+        color: @syntax-gutter-text-color;
+    }
+
+    .selection .region {
+        background-color: @syntax-selection-color;
+    }
+}
+
+.bracket-matcher .region {
+    background-color: @bracket-matcher-color;
+    opacity: 0.6;
+    border-bottom: 0 none;
 }
