@@ -102,10 +102,10 @@
     &.comment {
         color: @comment-color;
     }
-    &.constant, &.constant:not(.inline-data) *:not(.invisible-character) {
+    &.constant:not(.inline-data), &.constant:not(.inline-data) *:not(.invisible-character) {
         color: @string-color;
     }
-    &.constant.inline-data *:not(.invisible-character) {
+    &.constant.inline-data, &.constant.inline-data *:not(.invisible-character) {
         color: @code-color;
     }
 }
