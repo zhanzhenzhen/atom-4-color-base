@@ -96,13 +96,16 @@
     &.string {
         color: @code-color;
     }
-    &.punctuation:not(&.comment) {
+    &.punctuation:not(.comment) {
         color: @keyword-color;
     }
     &.comment {
         color: @comment-color;
     }
-    &.constant, &.constant *:not(.invisible-character) {
+    &.constant, &.constant:not(.inline-data) *:not(.invisible-character) {
         color: @string-color;
+    }
+    &.constant.inline-data *:not(.invisible-character) {
+        color: @code-color;
     }
 }
