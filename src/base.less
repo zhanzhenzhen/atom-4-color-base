@@ -64,6 +64,10 @@
         color: @keyword-color;
     }
 
+    .storage.type.function.fus, .storage.type.class.fus {
+        color: @other-color-1;
+    }
+
     // String interpolation in Ruby, CoffeeScript, and others
     .string {
         .source,
@@ -86,6 +90,9 @@
     }
     .entity.name.function.fus, .variable.parameter, .variable.assignment {
         font-style: italic;
+    }
+    .entity.name.function.fus, .variable.parameter.fus, .variable.assignment.fus {
+        color: @other-color-2;
     }
 }
 
